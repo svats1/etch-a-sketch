@@ -1,0 +1,10 @@
+.gridcontainer {
+    display: flex;
+    height: 10vh;
+    background-color: black;
+    flex-wrap: wrap;
+}
+.box {
+    flex-grow: 1;
+    min-width: 30vw;
+}
