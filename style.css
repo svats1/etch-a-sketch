@@ -1,12 +1,17 @@
 body {
     margin: 0;
+    background-color: rgb(48, 48, 48);
 }
 .gridcontainer {
     display: flex;
     background-color: black;
     flex-wrap: wrap;
     padding: 5px;
+    width: 600px;
+    height: 600px;
+
 }
 .box {
-    flex-grow: 1;
+    flex: 1;
+    /* flex-grow: 0.5; */
 }
