@@ -1,19 +1,25 @@
-const container = document.querySelector('.gridcontainer')
-
-let boxCount = 0
-let gridSize = 16
-
-while (boxCount < gridSize) {
-    const box = document.createElement('div')
-    box.className = "box"
-    box.style.backgroundColor = "red"
-    box.style.border = "0.25px white solid"
-    // box.style.minWidth = "calc(29.5*10px)"
-    box.style.minWidth = `calc(600px/${Math.sqrt(gridSize)}*0.95)`
+window.addEventListener('load', () => {
     
-    // box.style.height = box.style.minWidth
+    let boxCount = 0
+    
+    const container = document.querySelector('.gridcontainer')
 
-    container.appendChild(box)
+    const input = document.querySelector('#input')
+    input.addEventListener('submit', e => {
+        e.preventDefault()
+        
+        let gridSize = parseInt(e.target[0].value)
 
-    boxCount++
-}
+        while (boxCount < gridSize) {
+            
+            const box = document.createElement('div')
+            box.className = "box"
+            box.style.backgroundColor = "red"
+            box.style.border = "0.25px white solid"
+                    
+            container.appendChild(box)
+        
+            boxCount++
+        }
+    })
+})

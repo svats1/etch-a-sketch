@@ -3,15 +3,13 @@ body {
     background-color: rgb(48, 48, 48);
 }
 .gridcontainer {
-    display: flex;
+    display: grid;
     background-color: black;
-    flex-wrap: wrap;
     padding: 5px;
     width: 600px;
     height: 600px;
-
+    /* flex-grow: 0; */
 }
 .box {
-    flex: 1;
-    /* flex-grow: 0.5; */
+    /* flex: 1; */
 }
