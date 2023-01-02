@@ -12,14 +12,13 @@
     <div class="gridcontainer"></div>
     <form id="input">
         <label for="input">Gridsize</label>
-        <input type="range" min="1" max="50" name="input" value="1" 
-        oninput="gridsize.value = this.value">
-        
-        <output id="gridsize">1</output>
+        <input type="number" min="1" max="100" name="input" value="4">
+        <button type="submit">Submit</button>
         <div>
             <label for="colorpicker">Color Picker: </label>
-            <input type="color" id="colorpicker" value="#000000">
+            <input type="color" id="colorpicker" value="#FF0000">
         </div>
     </form>
+    
 </body>
 </html>
