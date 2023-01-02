@@ -11,8 +11,11 @@
 <body>
     <div class="gridcontainer"></div>
     <form id="input">
-        <input type="number" name="input">
-        <button type="submit">submit</button>
+        <label for="input">Gridsize</label>
+        <input type="range" min="1" max="50" name="input" value="1" 
+        oninput="gridsize.value = this.value">
+        
+        <output id="gridsize">1</output>
     </form>
 </body>
 </html>

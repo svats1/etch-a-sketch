@@ -1,48 +1,29 @@
-// window.addEventListener('load', () => {
-    
-//     let boxCount = 0
-    
-//     const container = document.querySelector('.gridcontainer')
+window.addEventListener('load', () => {
 
-//     const input = document.querySelector('#input')
-//     input.addEventListener('submit', e => {
-//         e.preventDefault()
+    const input = document.querySelector('#input')
+    input.addEventListener('input', e => {
+        e.preventDefault()
+        const gridSize = parseInt(e.target.value)
 
-//         while (boxCount < parseInt(e.target[0].value)) {
-            
-//             const box = document.createElement('div')
-//             box.className = "box"
-//             box.style.backgroundColor = "red"
-//             box.style.border = "0.25px white solid"
+        const container = document.querySelector('.gridcontainer')
+        container.innerHTML = ''
+
+        let boxCount = 0
+        while (boxCount < Math.pow(gridSize,2)) {
+
+            const box = document.createElement('div')    
+            box.className = "box"
+            box.style.backgroundColor = "white"
+            box.style.borderRadius = "3px"
+            box.style.minWidth = `calc(600px/${gridSize})`
                     
-//             container.appendChild(box)
-        
-//             boxCount++
-//         }
-//     })
-// })
+            container.appendChild(box)
 
-const input = document.querySelector('#input')
-input.addEventListener('submit', e => {
-    e.preventDefault()
+            boxCount++
+        }
 
-    const container = document.querySelector('.gridcontainer')
-    container.innerHTML = ''
+        // Reset to re-enter While loop on next Submit
+        boxCount = 0
+    })
 
-    let boxCount = 0
-    while (boxCount < parseInt(e.target[0].value)) {
-
-        const box = document.createElement('div')
-  
-        box.className = "box"
-        box.style.backgroundColor = "red"
-        box.style.border = "0.25px white solid"
-                
-        container.appendChild(box)
-    
-        boxCount++
-    }
-
-    // Reset to re-enter While loop on next Submit
-    boxCount = 0
 })

@@ -3,13 +3,19 @@ body {
     background-color: rgb(48, 48, 48);
 }
 .gridcontainer {
-    display: grid;
+    display: flex;
     background-color: black;
-    padding: 5px;
+    padding: 10px;
+    border-radius: 15px;
     width: 600px;
     height: 600px;
-    /* flex-grow: 0; */
+    flex-wrap: wrap;
+    margin: 10px;
+    /* gap: 1px; */
 }
 .box {
-    /* flex: 1; */
+    flex: 1;
+}
+#input {
+    color: white;
 }
