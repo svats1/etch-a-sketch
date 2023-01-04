@@ -8,6 +8,7 @@ body {
     align-items: center;
     flex-grow: 1;
     align-self: center;
+    color: white;
 
 }
 .gridcontainer {
@@ -23,7 +24,4 @@ body {
 }
 .box {
     flex: 1;
-}
-#input {
-    color: rgb(255, 255, 255);
 }

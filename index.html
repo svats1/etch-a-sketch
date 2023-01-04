@@ -10,21 +10,22 @@
 </head>
 <body>
     <div class="main">
+        <form id="newgrid">
+            <label for="newgrid">Gridsize</label>
+            <input type="number" min="1" max="100" name="newgrid" value="16">
+            <button type="submit">Draw New Grid</button>  
+        </form>
+        
         <div class="gridcontainer"></div>
-        <div class="options">
-            <form id="input">
-                <label for="input">Gridsize</label>
-                <input type="number" min="1" max="100" name="input" value="16">
-                <button type="submit">Draw New Grid</button>
-                <div>
-                    <label for="colorpicker">Color Picker: </label>
-                    <input type="color" id="colorpicker" value="#FF0000">
-                </div>  
-            </form>
-            <form id="randRGB">
-                <input type="submit" name="randRGB" value="Randomize">
-            </form>
-        </div>
+
+        <form id="color">
+            <div>
+                <label for="colorpicker">Color Picker: </label>
+                <input type="color" id="colorpicker" value="#FF0000">
+                <input type="checkbox" id="randomize" name="randomize">
+                <label for="randomize">- Randomize Color</label>
+            </div>
+        </form>
     </div>  
 </body>
 </html>
