@@ -9,19 +9,22 @@
     <script src="./script.js" defer></script>
 </head>
 <body>
-    <div class="gridcontainer"></div>
-    <form id="input">
-        <label for="input">Gridsize</label>
-        <input type="number" min="1" max="100" name="input" value="16">
-        <button type="submit">Draw New Grid</button>
-        <div>
-            <label for="colorpicker">Color Picker: </label>
-            <input type="color" id="colorpicker" value="#FF0000">
+    <div class="main">
+        <div class="gridcontainer"></div>
+        <div class="options">
+            <form id="input">
+                <label for="input">Gridsize</label>
+                <input type="number" min="1" max="100" name="input" value="16">
+                <button type="submit">Draw New Grid</button>
+                <div>
+                    <label for="colorpicker">Color Picker: </label>
+                    <input type="color" id="colorpicker" value="#FF0000">
+                </div>  
+            </form>
+            <form id="randRGB">
+                <input type="submit" name="randRGB" value="Randomize">
+            </form>
         </div>
-        
-    </form>
-    <form id="randRGB">
-        <input type="submit" name="randRGB" value="Randomize">
-    </form>    
+    </div>  
 </body>
 </html>
