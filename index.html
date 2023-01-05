@@ -9,11 +9,15 @@
     <script src="./script.js" defer></script>
 </head>
 <body>
+
+    <div class="header">Etch-A-Sketch</div>
+    <div class="subheading">Hover over the grid below and create your masterpiece!</div>
     <div class="main">
+
         <form id="newgrid">
-            <label for="newgrid">Gridsize</label>
-            <input type="number" min="1" max="100" name="newgrid" value="16">
-            <button type="submit">Draw New Grid</button>  
+            <label for="newgrid">Gridsize :</label>
+            <input type="number" min="1" max="100" id="newgrid" name="newgrid" value="16">
+            <button type="submit" id="drawnewgrid">Draw New Grid</button>  
         </form>
         
         <div class="gridcontainer"></div>
@@ -22,8 +26,9 @@
             <div>
                 <label for="colorpicker">Color Picker: </label>
                 <input type="color" id="colorpicker" value="#FF0000">
+                <label for="randomize">Randomize Color : </label>
                 <input type="checkbox" id="randomize" name="randomize">
-                <label for="randomize">- Randomize Color</label>
+        
             </div>
         </form>
     </div>  
